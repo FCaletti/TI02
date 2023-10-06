@@ -1,0 +1,75 @@
+Proyecto Integrador - Sequelise MySQL
+
+Carpeta Diseño : contiene archivos creados para el diseño de la base de datos
+
+Carpeta SQL : Archivo trailerflix_FAC.sql contiene todas las instrucciones para crear la tabla con la que funciona la API
+Comentario
+Aparte de la informacion que hay en el JSON, agruegué a cada película, el o los paises de origen.
+
+Carpeta API : Contiene la API
+
+Para probar la API
+/trailerflix/ -> mensaje de bienvenida
+
+Para listar todas las peliculas
+/trailerflix/peliculas/
+/trailerflix/peliculas/todo
+/trailerflix/peliculas/all
+
+Para consultar una pelicula por ID
+/trailerflix/peliculas/ID/(Nro ID)
+
+Para buscar una pelicula o varias peliculas por el tìtulo o parte de él
+/trailerflix/peliculas/titulo/(texto)
+
+Para buscar una pelicula o varias peliculas por el nombre del género o parte de él
+/trailerflix/peliculas/genero/(texto)
+
+Para buscar una pelicula o varias peliculas por el nombre del actor/actriz o parte de él
+/trailerflix/peliculas/actor/(texto)
+
+Para buscar una pelicula o varias peliculas por el nombre de la categoria o parte de él
+/trailerflix/peliculas/categoria/(texto)
+
+Para listar todas las peliculas con todo el contenido completo (genero, actores, paises de origen)
+/trailerflix/peliculas/full
+
+Para listar todos los actores/actrices
+/trailerflix/actores/
+/trailerflix/actores/all
+/trailerflix/actores/todo
+
+Para consultar un actor/actriz por ID
+/trailerflix/actores/ID/(Nro ID)
+
+Para buscar uno o varios actores/actrices por el nombre o parte de él
+/trailerflix/actores/nombre/(texto)
+
+Para listar todos los generos
+/trailerflix/generos/
+/trailerflix/generos/all
+/trailerflix/generos/todo
+
+Para consultar un genero por ID
+/trailerflix/ganero/ID/(Nro ID)
+
+Para buscar uno o varios generos por el nombre o parte de él
+/trailerflix/actores/generos/(texto)
+
+Para listar todas las categorias
+/trailerflix/categorias/
+/trailerflix/categorias/all
+/trailerflix/categorias/todo
+
+el resto de las URL posibles da un mensaje de error.
+
+
+
+
+
+
+
+
+
+
+
