@@ -51,7 +51,7 @@ Para listar todos los generos
 /trailerflix/generos/todo
 
 Para consultar un genero por ID
-/trailerflix/ganero/ID/(Nro ID)
+/trailerflix/generos/ID/(Nro ID)
 
 Para buscar uno o varios generos por el nombre o parte de él
 /trailerflix/generos/nombre/(texto)
