@@ -18,6 +18,11 @@ const listaActores = async (req, res) =>{
 const unActor = async (req, res) =>{
    try {
       const { actorID } = req.params
+      if(isNaN(actorID) || parseInt(actorID) == 0){
+         res.status(400)
+            .json({error : 'Error al acceder al ID'})
+         return;
+      }      
       const actor = await Actores.findByPk(parseInt(actorID))
       !(actor)
          ? res.status(404).json({error:'Actor / Actriz no encontrado/a'})

@@ -17,9 +17,14 @@ const listaGeneros = async (req, res) =>{
 const unGenero = async (req, res) =>{
    try {
       const { generoID } = req.params
+      if(isNaN(generoID) || parseInt(generoID) == 0){
+         res.status(400)
+            .json({error : 'Error al acceder al ID'})
+         return;
+      }      
       const genero = await Generos.findByPk(parseInt(generoID))
       !(genero)
-         ? res.status(404).json({error:'Género no encontrado/a'})
+         ? res.status(404).json({error:'Género no encontrado'})
          : res.status(200).json(genero)
    } catch (error){
       res.status(500).json({error: 'Error en el servidor', descripcion: error.message})

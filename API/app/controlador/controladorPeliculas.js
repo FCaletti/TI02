@@ -25,8 +25,15 @@ const listaPeliculas = async (req, res) =>{
 const unaPelicula = async (req, res) =>{
    try {
       const { peliculaID } = req.params
+      if(isNaN(peliculaID) || parseInt(peliculaID) == 0){
+         res.status(400)
+            .json({error : 'Error al acceder al ID'})
+         return;
+      }      
       const pelicula = await Peliculas.findByPk(parseInt(peliculaID))
-      pelicula.dataValues.Poster = req.protocol+'://'+req.hostname+":"+puerto + '/recursos' + pelicula.dataValues.Poster
+      if (pelicula){
+         pelicula.dataValues.Poster = req.protocol+'://'+req.hostname+":"+puerto + '/recursos' + pelicula.dataValues.Poster
+      }
       !(pelicula)
          ? res.status(404).json({error:'Película no encontrada'})
          : res.status(200).json(pelicula)
